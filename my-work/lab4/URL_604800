@@ -1,0 +1,7 @@
+#!/bin/bash
+
+aws s3 cp /Users/td/Desktop/DS2026/HW/HW3.pdf s3://ds2022-pnr3kr/HW3.pdf
+
+url=$(aws s3 presign s3://ds2022-pnr3kr/HW3.pdf --expires-in 604800)
+
+echo $url
